@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <div class ="logo-container">
+                    <img src="Images/Logo3.png" class="logo">
+                </div>
+                <ul>
+                    <li>
+                        <a href="#header">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#projects">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Computer Engineer</p>
+                <h1>Hi, I am <span>Mohammad <br>Ahmad</span>, Welcome to <br>My Portfolio</h1>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ------------about---------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/LeMeBruh.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        I am a third-year Computer Engineering student at the University of Guelph. I am really passionate about technology of all types but specifically computers whether it's software or hardware. I am keen to gaining more knowledge and experience in this field to help me in the future of my career. Regardless of which direction or specialty I decide to go with, I am always welcoming of new experiences and challenges.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming</span><br>Java, Python, C/C++, VHDL, React, Node.js</li>
+                            <li><span>Web Development</span><br>HTML, CSS, JavaScript, TypeScript</li>
+                            <!-- <li><span>Database Management</span><br>SQL, MongoDB, Firebase</li> -->
+                            <li><span>Operating Systems</span><br>Windows, Linux, macOS</li>
+                            <li><span>Soft Skills</span><br>Leadership, Communication, Problem-Solving, Critical Thinking, Team Work, Bilingual</li>
+                            <li><span>Others</span><br>Adobe Photoshop, Adobe Premiere Pro, SolidWorks, AutoCAD, MATLAB, Arduino, Robotics</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Youthforce - Team Supervisor / July 2022 - September 2024</span><br>Worked with The Region Of Waterloo as a Team Supervisor for the Youthforce program leading seven individuals to perform landscaping tasks around the region.
+                                <br>Revamped the region’s project proposal creation system using Excel to better communicate the vision of the projects which received great feedback from the higher-ups.
+                                </li>
+                            <li><span>Mohawk Holdings - Warehouse Manager / April 2023 - December 2023</span><br>Managed inventory, import, and export both physically and digitally. 
+                                Supervised and managed five employees with high leadership and social skills that improved workplace productivity. 
+                                Quick to help coworkers in various positions of work. 
+                                Designed a more practical inventory system to improve efficiency.
+                                </li>
+                            <!-- <li><span>Database Management</span><br>SQL, MongoDB, Firebase</li> -->
+                            <li><span>Coil Care - Office and Inventory Management / July 2019 - September 2021</span><br>Managed the inventory of a warehouse to optimize the usage of the space available for better use.
+                                Provided part-time office support through administrative and inventory completion. 
+                                Maintained inventory with the use of Excel spreadsheets.
+                                </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Bachelor of Engineering (Computer Engineering Co-op) - University of Guelph</span><br><br>Relevant Courses: <br>
+                                Engineering Design I and II, Object Oriented Programming, Data Structures, Digital Systems, Robotic Systems, Signal Processing, Electronic Devices. <br>
+                                 Expected Graduation: April 2027 <br><br> CSWA SOLIDWORKS Certificate - March 2024</li>
+                                </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+                
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabName){
+            for (tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabName).classList.add("active-tab");
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const showMoreBtn = document.getElementById('showMoreBtn');
+            let isExpanded = false;
+
+            showMoreBtn.addEventListener('click', function() {
+                const hiddenCards = document.querySelectorAll('.project-card.hidden');
+                
+                hiddenCards.forEach(card => {
+                    if (!isExpanded) {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.classList.add('show');
+                        }, 10);
+                    } else {
+                        card.classList.remove('show');
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 500);
+                    }
+                });
+
+                isExpanded = !isExpanded;
+                showMoreBtn.textContent = isExpanded ? 'Show Less' : 'Show More';
+            });
+        });
+    </script>
+    <!-- ------------Personal Projects---------------- -->
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title">Personal Projects</h1>
+            <div class="projects-list">
+                <!-- First 3 visible cards -->
+                <div class="project-card">
+                    <h2>Productivity Game/App</h2>
+                    <p>Currently working on an app that gamifies productivity to give people a fun way to get things done and a sense of motive or 
+                    accomplishment when they do work. The app is still in early development as it's completely made by me and most if not all the 
+                    skills are self taught alongside university work.</p>
+                </div>
+                <div class="project-card">
+                    <h2>Project 2</h2>
+                    <p>Participated alongside three other peers in the competition that was themed around robotics
+                        Design a robot that had a given task to complete and collaborate with other teams in order to score points
+                        The robot was capable of following a path, assembling 2 halves of a ball placed apart from one another, combining them and dropping them in a cup.
+                        Achieved third place in the competition with very little gap from second and first places.
+                        </p>
+                </div>
+                <div class="project-card">
+                    <h2>Project 3</h2>
+                    <p>Worked with three peers to create a networking program for data organization and filtering. 
+                        The program was able to access and use resources from an online database. 
+                        The program was developed to do various filtering and sorting processes on specific sets of data that were provided.
+                        </p>
+                </div>
+                
+                <!-- Hidden cards -->
+                <div class="project-card hidden">
+                    <h2>Project 4</h2>
+                    <p>Working with a group of peers to design a Kinder Egg toy themed mechanical device.
+                        Designed a mini spaceship launching station with a locking mechanism that could be released to launch.
+                        Pitched the design with a powerful marketing strategy to a group of judges including the course professor.
+                        Working in a group of five peers to reverse-engineer a CyberHand that uses hydraulic mechanics to be operated.
+                        Modelling, assembling, and animating over sixty unique pieces and over two hundred overall pieces for the full model.
+                        </p>
+                </div>
+                <div class="project-card hidden">
+                    <h2>Project 5</h2>
+                    <p>Detailed overview of your fifth project, discussing the objectives, implementation details, technologies used, and results achieved. Keep the description length consistent with other projects.</p>
+                </div>
+                <div class="project-card hidden">
+                    <h2>Project 6</h2>
+                    <p>In-depth description of your sixth project, covering the project goals, technical implementation, challenges overcome, and final results. Maintain consistent length with other project descriptions.</p>
+                </div>
+            </div>
+            
+            <div class="show-more-container">
+                <button id="showMoreBtn" class="show-more-btn">Show More</button>
+            </div>
+        </div>
+    </div>
+    <!-- ------------Contact---------------- -->
+     <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope" style="color: #4f00ff;"></i> contact@example.com</p>
+                    <p><i class="fa-solid fa-phone" style="color: #4f00ff;"></i> 5197785464</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/mahmad24/"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/MAhmad24"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href="Images/Resume.pdf" download class="show-more-btn btn2">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="show-more-btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Mohammad Ahmad</p>
+        </div>
+            
+     </div>
+        
+
+
+
+</body>
+</html>

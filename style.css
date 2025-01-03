@@ -240,7 +240,7 @@ nav ul li a:hover::after{
 
 .project-card:hover, .project-card.hidden:hover {
     transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Reduced shadow */
 }
 
 /* Hidden state specifics */
@@ -436,4 +436,3 @@ form input, form textarea{
     margin-top: 10px;
     
 }
-

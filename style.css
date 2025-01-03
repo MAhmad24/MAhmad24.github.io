@@ -273,7 +273,7 @@ nav ul li a:hover::after{
 }
 
 .project-card:nth-child(5) {
-    background-image: url('Images/Project5.jpg');
+    background-image: url('Images/ProjectX.jpg');
 }
 
 .project-card:nth-child(6) {

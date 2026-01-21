@@ -328,6 +328,19 @@ nav ul li a:hover::after{
     background: #793aff;
 }
 
+.resume-downloads {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.resume-downloads .btn2 {
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
 .responsive-image {
     max-width: 100%;
     height: auto;

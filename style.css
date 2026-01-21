@@ -190,17 +190,14 @@ nav ul li a:hover::after{
 }
 
 .project-card {
-    background: rgba(38, 38, 38, 0.7); /* Semi-transparent background */
+    background: rgba(38, 38, 38, 0.9); /* Solid background - no images */
     padding: 40px;
     border-radius: 10px;
     transition: all 0.5s ease;
     position: relative;
     overflow: hidden;
     backdrop-filter: blur(5px);
-    background-size: cover;
-    background-position: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5), 
-                inset 0 0 100px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 .project-card:hover {
@@ -211,15 +208,13 @@ nav ul li a:hover::after{
 
 /* Style for all project cards including hidden ones */
 .project-card, .project-card.hidden {
-    background: rgba(38, 38, 38, 0.7);
+    background: rgba(38, 38, 38, 0.9); /* Solid background - no images */
     padding: 40px;
     border-radius: 10px;
     transition: all 0.5s ease;
     position: relative;
     overflow: hidden;
     backdrop-filter: blur(5px);
-    background-size: cover;
-    background-position: center;
 }
 
 /* Before pseudo-element for overlay */
@@ -256,30 +251,7 @@ nav ul li a:hover::after{
     opacity: 1;
 }
 
-.project-card:nth-child(1) {
-    background-image: url('Images/project1.jpeg');
-}
-
-.project-card:nth-child(2) {
-    background-image: url('Images/Project2.jpg');
-}
-
-.project-card:nth-child(3) {
-    background-image: url('Images/Project3.jpg');
-}
-
-/* Add hidden cards 4-6 */
-.project-card:nth-child(4) {
-    background-image: url('Images/Project4.jpg');
-}
-
-.project-card:nth-child(5) {
-    background-image: url('Images/ProjectX.jpg');
-}
-
-.project-card:nth-child(6) {
-    background-image: url('Images/Project6.jpg');
-}
+/* Background images disabled - removed for better matching */
 
 .project-card::after {
     content: '';

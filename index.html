@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio Website</title>
+    <link rel="icon" type="image/png" href="Images/Logo.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -166,10 +167,37 @@
                         <br>Implemented multiplexed 3-digit 7-segment display driving using GPIO timing loops and transistor digit selection (common-anode).
                         <br>Wrote low-level C using libgpiod (GPIO) and lgpio (I2C), including digit LUT mapping and real-time refresh for flicker-free display.
                         <br>Validated accuracy against oscilloscope/function generator measurements; logged samples to CSV for analysis.
-                        <br><span style="color: #6824ff;">2024 | Technologies: C, I2C, GPIO, ADS1015, 7-Segment Display</span>
+                        <br><span style="color: #6824ff;">September 2025 - December 2025</span>
                     </p>
                 </div>
                 <div class="project-card reveal">
+                    <h2>Matrix Multiplication Hardware Accelerator</h2>
+                    <p>Designed and implemented a 3×3 matrix multiplication hardware accelerator in VHDL, targeting the Nexys A7 FPGA (100 MHz) using Vivado.
+                        <br>Built an FSM-controlled iterative MAC datapath (i, j, k counters) to compute nine dot-products deterministically and assert a done flag on completion.
+                        <br>Packed/unpacked matrix data using flattened bus interfaces: two 54-bit inputs (9×6-bit) and a 126-bit output (9×14-bit), ensuring correct bit slicing and row-major ordering.
+                        <br>Integrated RTL modules and implemented time-division multiplexed 7-segment display control to show selectable output elements via board switches.
+                        <br><span style="color: #6824ff;">September 2025 - December 2025</span>
+                    </p>
+                </div>
+                
+                <!-- Hidden cards - ordered by date (most recent first) -->
+                <div class="project-card hidden">
+                    <h2>Adder Architecture Design & Performance Analysis</h2>
+                    <p>Designed and implemented RCA, CSA, and CLA architectures in VHDL, parameterized for 16-, 32-, and 64-bit operation using generics and generate statements.
+                        <br>Performed post-implementation timing analysis in Vivado, comparing critical paths, slack, and Fmax under identical clock constraints.
+                        <br>Analyzed area, speed, and power tradeoffs, demonstrating why CLA meets 100 MHz at 64-bit while RCA fails due to full-width carry propagation.
+                        <br><span style="color: #6824ff;">September 2025 - December 2025</span>
+                    </p>
+                </div>
+                <div class="project-card hidden">
+                    <h2>MIPS Architecture</h2>
+                    <p>Designed and implemented a MIPS architecture computer using VHDL by developing an ALU, Control Unit, and Register File, resulting in a functional MIPS processor that executed instructions correctly.
+                        <br>Developed and tested components such as instruction fetch, decode, execute, and memory access stages by leveraging VHDL simulations.
+                        <br>Modeled and simulated the functionality of the MIPS processor using VHDL, leading to successful verification of its behavior and instruction execution through extensive testing.
+                        <br><span style="color: #6824ff;">January 2025 - April 2025</span>
+                    </p>
+                </div>
+                <div class="project-card hidden">
                     <h2>Guelph Engineering Competition</h2>
                     <p>Collaborated with three peers to design and build an autonomous robot for a competitive robotics challenge.
                         <br>Programmed robot using Arduino/Python to follow paths, locate and assemble ball components, and deliver to target zones.
@@ -178,8 +206,6 @@
                         <br><span style="color: #6824ff;">October 2024</span>
                     </p>
                 </div>
-                
-                <!-- Hidden cards - ordered by date (most recent first) -->
                 <div class="project-card hidden">
                     <h2>University of Guelph - Design II Project</h2>
                     <p>Collaborated with five peers to design a Kinder Egg toy themed mechanical device featuring a mini spaceship launching station with spring-loaded locking mechanism.
@@ -190,37 +216,12 @@
                     </p>
                 </div>
                 <div class="project-card hidden">
-                    <h2>Matrix Multiplication Hardware Accelerator</h2>
-                    <p>Designed and implemented a 3×3 matrix multiplication hardware accelerator in VHDL, targeting the Nexys A7 FPGA (100 MHz) using Vivado.
-                        <br>Built an FSM-controlled iterative MAC datapath (i, j, k counters) to compute nine dot-products deterministically and assert a done flag on completion.
-                        <br>Packed/unpacked matrix data using flattened bus interfaces: two 54-bit inputs (9×6-bit) and a 126-bit output (9×14-bit), ensuring correct bit slicing and row-major ordering.
-                        <br>Integrated RTL modules and implemented time-division multiplexed 7-segment display control to show selectable output elements via board switches.
-                        <br><span style="color: #6824ff;">2024 | Technologies: VHDL/Vivado, Nexys A7 FPGA</span>
-                    </p>
-                </div>
-                <div class="project-card hidden">
                     <h2>Control Systems & Motor Drive Experiments</h2>
                     <p>Implemented and analyzed ON/OFF, P, PI, and PD controllers on real heater and DC motor systems under varying setpoints, hysteresis, and disturbances.
                         <br>Identified system transfer functions from experimental data and validated models using closed-loop simulation.
                         <br>Evaluated effects of actuator saturation, noise, friction, and delays on system stability, overshoot, and settling time.
                         <br>Used MATLAB and Simulink to simulate step responses, Bode plots, and controller tuning tradeoffs for real-world electromechanical systems.
-                        <br><span style="color: #6824ff;">2024 | Technologies: MATLAB/Simulink</span>
-                    </p>
-                </div>
-                <div class="project-card hidden">
-                    <h2>MIPS Architecture</h2>
-                    <p>Designed and implemented a MIPS architecture computer using VHDL by developing an ALU, Control Unit, and Register File, resulting in a functional MIPS processor that executed instructions correctly.
-                        <br>Developed and tested components such as instruction fetch, decode, execute, and memory access stages by leveraging VHDL simulations.
-                        <br>Modeled and simulated the functionality of the MIPS processor using VHDL, leading to successful verification of its behavior and instruction execution through extensive testing.
-                        <br><span style="color: #6824ff;">2024 | Technologies: VHDL</span>
-                    </p>
-                </div>
-                <div class="project-card hidden">
-                    <h2>Adder Architecture Design & Performance Analysis</h2>
-                    <p>Designed and implemented RCA, CSA, and CLA architectures in VHDL, parameterized for 16-, 32-, and 64-bit operation using generics and generate statements.
-                        <br>Performed post-implementation timing analysis in Vivado, comparing critical paths, slack, and Fmax under identical clock constraints.
-                        <br>Analyzed area, speed, and power tradeoffs, demonstrating why CLA meets 100 MHz at 64-bit while RCA fails due to full-width carry propagation.
-                        <br><span style="color: #6824ff;">2024 | Technologies: VHDL/Vivado, Nexys A7 FPGA</span>
+                        <br><span style="color: #6824ff;">2024</span>
                     </p>
                 </div>
                 <div class="project-card hidden">

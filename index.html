@@ -13,10 +13,10 @@
 <body>
     <div id="header" class="reveal">
         <div class="container">
-            <div class="nav-containter">
+            <div class="nav-container">
                 <nav>
                 <div class ="logo-container">
-                    <img src="Images/Logo3.png" class="logo">
+                    <img src="Images/Logo3.png" class="logo" alt="Mohammad Ahmad Logo">
                 </div>
                 <ul>
                     <li>
@@ -50,12 +50,12 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1 reveal">
-                    <img src="Images/LeMeBruh.png" class="responsive-image">
+                    <img src="Images/LeMeBruh.png" class="responsive-image" alt="Mohammad Ahmad">
                 </div>
                 <div class="about-col-2 reveal">
                     <h1 class="sub-title">About Me</h1>
                     <p>
-                        I am a third-year Computer Engineering student at the University of Guelph. I am really passionate about technology of all types but specifically computers whether it's software or hardware. I am keen to gaining more knowledge and experience in this field to help me in the future of my career. Regardless of which direction or specialty I decide to go with, I am always welcoming of new experiences and challenges.
+                        I am a fourth-year Computer Engineering student at the University of Guelph. I am really passionate about technology of all types but specifically computers whether it's software or hardware. I am keen to gaining more knowledge and experience in this field to help me in the future of my career. Regardless of which direction or specialty I decide to go with, I am always welcoming of new experiences and challenges.
                     </p>
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
@@ -64,8 +64,9 @@
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>Programming Languages</span><br>Python, C/C++, C#, Java, JavaScript, TypeScript, HTML/CSS, VHDL, VBA, SQL, MATLAB</li>
-                            <li><span>Frameworks & Tools</span><br>React, Node.js, Power BI, Excel (Advanced), Office 365, SharePoint, Unity, Git, GitHub</li>
+                            <li><span>Programming Languages</span><br>Python, C/C++, C#, Java, JavaScript, TypeScript, HTML/CSS, VHDL, VBA, SQL, R, Assembly, MATLAB</li>
+                            <li><span>Frameworks & Tools</span><br>React, Node.js, REST APIs, Spring, Docker, PowerApps, PowerAutomate, Power BI, Excel (Advanced), Office 365, SharePoint, Unity, Git, GitHub, Postman, Jira</li>
+                            <li><span>Databases & Data</span><br>SQL (queries, schema design, joins), MongoDB, Excel (Advanced), Power BI dashboards</li>
                             <li><span>Software</span><br>MATLAB/Simulink, Vivado, AutoCAD, SolidWorks, Adobe Photoshop, Adobe Premiere Pro, Jira, VS Code</li>
                             <li><span>Hardware & Systems</span><br>Arduino, Raspberry Pi (GPIO/I2C), ADC interfacing, Embedded Systems, PLCs, FPGA (Nexys A7), Digital Systems, Robotic Systems, PCB Design (KiCad), basic circuits</li>
                             <li><span>Protocols & Interfaces</span><br>I2C, SPI, USB, TCP/IP, WebSockets, HTTP, JSON</li>
@@ -75,8 +76,9 @@
                     <div class="tab-contents" id="experience">
                         <ul>
                             <li><span>Cooke & Denison Ltd. - IT Project Assistant (Co-op) / January 2025 - December 2025</span><br>Built a two-click, multi-file Excel quoting engine (VBA, SQL, Python) with type-specific machining-time models; auto-generates Word/PDF quotes, logs to a database and refreshes inventory, cutting quoting time from ~2 hours to ~5 mins.
-                                <br>Integrated CNC machine data with Microsoft Business Central/Shop Floor Insight and produced Power BI dashboards for uptime/downtime and order progress.
+                                <br>Integrated CNC machine data with Microsoft Business Central/Shop Floor Insight via REST API and produced Power BI dashboards for uptime/downtime and order progress, delivering real-time production metrics to cross-functional teams.
                                 <br>Automated office workflows (punch in/out reports, supplier purchase requests, ready-to-send quotes) and validated against historical estimates for accuracy and consistency.
+                                <br>Collaborated cross-functionally with manufacturing, engineering, and business stakeholders in an agile, iterative delivery cycle to identify needs and ship reliable solutions.
                                 </li>
                             <li><span>Youthforce - Team Supervisor / July 2022 - September 2024</span><br>Led a team of seven individuals in the Region of Waterloo's Youthforce program, coordinating landscaping projects across municipal properties.
                                 <br>Redesigned the region's project proposal creation system using Excel to better communicate project vision and speed up the process by 40%, receiving strong feedback from regional management.
@@ -94,14 +96,12 @@
                     <div class="tab-contents" id="education">
                         <ul>
                             <li><span>Bachelor of Engineering (Computer Engineering Co-op) - University of Guelph</span><br>September 2022 - Present | Expected Graduation: April 2027<br><br>Relevant Courses: <br>
-                                Engineering Design I and II, Object Oriented Programming, Data Structures, Digital Systems, Robotic Systems, Signal Processing, Electronic Devices, Micro and Nano Scale Electronics, Embedded Systems</li>
+                                Engineering Design I, II, and III, Object Oriented Programming, Data Structures & Algorithms, Operating Systems, Digital Systems, Embedded Systems, Communication and Networking Systems, Robotic Systems, Signal Processing, Electronic Devices, Micro and Nano Scale Electronics</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-            
-                
     </div>
 
     <script>
@@ -147,17 +147,18 @@
             });
         });
     </script>
+
     <!-- ------------Personal Projects---------------- -->
     <div id="projects" class="reveal">
         <div class="container">
             <h1 class="sub-title reveal">Personal Projects</h1>
             <div class="projects-list">
-                <!-- First 3 visible cards - ordered by date (most recent first) -->
                 <div class="project-card reveal">
                     <h2>Project Blacksite - 2D Game Development</h2>
                     <p>Developing a top-down shooter in C# using Unity, implementing core gameplay systems including player movement, physics-based shooting mechanics, and enemy AI with pathfinding algorithms.
-                        <br>Architected event-driven systems for wave management, health tracking, and game state handling using object-oriented design principles and Unity's component architecture.
-                        <br>Built dynamic UI systems, collision detection, and scene management while applying concepts like object pooling and coroutine-based async operations.
+                        <br>Architected a data-driven system using C# interfaces and object-oriented design principles, enabling new features (weapons, enemies, entities) to be added through configuration assets without modifying existing code — mirroring scalable backend service design.
+                        <br>Built centralized manager systems for game state, currency, and object pooling using singleton and observer patterns; implemented event-driven communication to decouple UI, persistence, and gameplay layers.
+                        <br>Implemented async operations using coroutine-based patterns, PlayerPrefs-based save/load persistence, and progressive difficulty scaling with wave-based enemy spawning.
                         <br><span style="color: #6824ff;">November 2025 - Present</span>
                     </p>
                 </div>
@@ -180,7 +181,6 @@
                     </p>
                 </div>
                 
-                <!-- Hidden cards - ordered by date (most recent first) -->
                 <div class="project-card hidden">
                     <h2>Adder Architecture Design & Performance Analysis</h2>
                     <p>Designed and implemented RCA, CSA, and CLA architectures in VHDL, parameterized for 16-, 32-, and 64-bit operation using generics and generate statements.
@@ -220,7 +220,7 @@
                     <p>Collaborated with three peers to design and build an autonomous robot for a competitive robotics challenge.
                         <br>Programmed robot using Arduino/Python to follow paths, locate and assemble ball components, and deliver to target zones.
                         <br>Implemented sensor integration (ultrasonic, line-following, etc.) and mechanical systems including gripper mechanisms and precise motor control.
-                        <br>Achieved third place with minimal point gap from first and second place teams.
+                        <br>Achieved second place overall.
                         <br><span style="color: #6824ff;">October 2024</span>
                     </p>
                 </div>
@@ -234,9 +234,10 @@
                 </div>
                 <div class="project-card hidden">
                     <h2>Java Networking Project</h2>
-                    <p>Collaborated with three peers to develop a networking program for data organization and filtering.
-                        <br>Integrated with external APIs and libraries from provided GitHub repositories to access and manipulate online database resources.
-                        <br>Implemented various filtering and sorting algorithms to process and organize specific datasets.
+                    <p>Collaborated with three peers to develop a networked data organization and filtering application.
+                        <br>Integrated external REST APIs and GitHub-hosted libraries to access and manipulate online database resources.
+                        <br>Implemented filtering, sorting, and querying algorithms across structured datasets.
+                        <br>Used Git for version control and collaborative development across the team.
                         <br><span style="color: #6824ff;">January 2023 - April 2023</span>
                     </p>
                 </div>
@@ -247,8 +248,9 @@
             </div>
         </div>
     </div>
+
     <!-- ------------Contact---------------- -->
-     <div id="contact" class="reveal">
+    <div id="contact" class="reveal">
         <div class="container">
             <div class="row">
                 <div class="contact-left reveal">
@@ -256,8 +258,8 @@
                     <p><i class="fa-solid fa-envelope" style="color: #4f00ff;"></i> mahmad24@uoguelph.ca</p>
                     <p><i class="fa-solid fa-phone" style="color: #4f00ff;"></i> 5197785464</p>
                     <div class="social-icons">
-                        <a href="https://www.linkedin.com/in/mahmad24/"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/MAhmad24"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/mahmad24/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/MAhmad24" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
                     </div>
                     <div class="resume-downloads">
                         <a href="Images/Resume_Software.pdf" download class="show-more-btn btn2">Download Resume (Software)</a>
@@ -271,33 +273,49 @@
                         <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                         <button type="submit" class="show-more-btn btn2">Submit</button>
                     </form>
+                    <span id="form-msg"></span>
                 </div>
             </div>
         </div>
         <div class="copyright">
             <p>Copyright © Mohammad Ahmad</p>
         </div>
-            
-     </div>
+    </div>
 
-     <script>
+    <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbz_4yJdYWoiwRY9ciEFK0tfPHrIObvZxFHfdAWludgfz4u5US26aRONroWvybaAT7ETJg/exec'
         const form = document.forms['submit-to-google-sheet']
-      
+        const formMsg = document.getElementById('form-msg')
+
         form.addEventListener('submit', e => {
           e.preventDefault()
+          const submitBtn = form.querySelector('button[type="submit"]')
+          submitBtn.disabled = true
+          submitBtn.textContent = 'Sending...'
+          formMsg.textContent = ''
+          formMsg.className = ''
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => console.log('Success!', response))
-            .catch(error => console.error('Error!', error.message))
+            .then(response => {
+              formMsg.textContent = 'Message sent! I\'ll get back to you soon.'
+              formMsg.className = 'form-success'
+              form.reset()
+            })
+            .catch(error => {
+              formMsg.textContent = 'Something went wrong. Please try again or email me directly.'
+              formMsg.className = 'form-error'
+            })
+            .finally(() => {
+              submitBtn.disabled = false
+              submitBtn.textContent = 'Submit'
+            })
         })
-      </script>
+    </script>
 
-      <!-- Scroll Reveal JS -->
-      <script>
+    <!-- Scroll Reveal JS -->
+    <script>
         (function(){
           const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
           if (prefersReduced) {
-            // Show everything immediately for reduced motion users
             document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
             return;
           }
@@ -306,7 +324,6 @@
             entries.forEach(entry => {
               if (entry.isIntersecting) {
                 entry.target.classList.add('is-visible');
-                // Unobserve once revealed to avoid reflows
                 observer.unobserve(entry.target);
               }
             });
@@ -314,10 +331,7 @@
 
           document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
         })();
-      </script>
-        
-
-
+    </script>
 
 </body>
 </html>

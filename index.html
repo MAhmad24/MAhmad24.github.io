@@ -294,7 +294,7 @@
           submitBtn.textContent = 'Sending...'
           formMsg.textContent = ''
           formMsg.className = ''
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          fetch(scriptURL, { method: 'POST', body: new FormData(form), mode: 'no-cors' })
             .then(response => {
               formMsg.textContent = 'Message sent! I\'ll get back to you soon.'
               formMsg.className = 'form-success'
